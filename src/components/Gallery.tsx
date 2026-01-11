@@ -1,41 +1,35 @@
 import { Camera } from "lucide-react";
-import galleryAcService from "@/assets/gallery-ac-service.jpg";
 import galleryFridgeService from "@/assets/gallery-fridge-service.jpg";
-import galleryWashingMachine from "@/assets/gallery-washing-machine.jpg";
+import galleryAcParts from "@/assets/gallery-ac-parts.jpg";
 import galleryAcInstall from "@/assets/gallery-ac-install.jpg";
-import galleryAcSales from "@/assets/gallery-ac-sales.jpg";
+import galleryAcService from "@/assets/gallery-ac-service.jpg";
 import galleryTeam from "@/assets/gallery-team.jpg";
 
 const galleryImages = [
   {
-    src: galleryAcService,
-    alt: "A/C Service",
-    title: "Split A/C Servicing",
-  },
-  {
     src: galleryFridgeService,
-    alt: "Fridge Repair",
-    title: "Refrigerator Repair",
+    alt: "Smart Fridge Service",
+    title: "Smart Fridge Setup",
   },
   {
-    src: galleryWashingMachine,
-    alt: "Washing Machine Service",
-    title: "Washing Machine Repair",
+    src: galleryAcParts,
+    alt: "A/C Parts",
+    title: "A/C Coil Repair",
   },
   {
     src: galleryAcInstall,
     alt: "A/C Installation",
-    title: "A/C Installation",
+    title: "Samsung A/C Installation",
   },
   {
-    src: galleryAcSales,
-    alt: "Appliance Showroom",
-    title: "Our Showroom",
+    src: galleryAcService,
+    alt: "A/C Service",
+    title: "A/C Maintenance",
   },
   {
     src: galleryTeam,
-    alt: "Our Team",
-    title: "Expert Team",
+    alt: "Our Team & Shop",
+    title: "Our Team & Shop",
   },
 ];
 
