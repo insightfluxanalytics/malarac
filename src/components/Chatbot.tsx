@@ -164,10 +164,15 @@ export const Chatbot = () => {
       {/* Chat Toggle Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-24 right-6 z-50 w-14 h-14 rounded-full bg-primary text-primary-foreground shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center hover:scale-110"
+        className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-primary text-primary-foreground shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center hover:scale-110 group"
         aria-label={isOpen ? "Close chat" : "Open chat"}
       >
-        {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
+        {!isOpen && (
+          <span className="absolute w-full h-full rounded-full bg-primary animate-ping opacity-30" />
+        )}
+        <span className="relative">
+          {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
+        </span>
       </button>
 
       {/* Chat Window */}
