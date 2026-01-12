@@ -171,7 +171,7 @@ export const Chatbot = () => {
           <span className="absolute w-full h-full rounded-full bg-primary animate-ping opacity-30" />
         )}
         <span className="relative">
-          {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
+          {isOpen ? <X className="w-6 h-6" /> : <Bot className="w-6 h-6" />}
         </span>
       </button>
 
