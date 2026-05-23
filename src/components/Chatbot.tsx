@@ -1,9 +1,10 @@
 import { useState, useRef, useEffect } from "react";
-import { MessageCircle, X, Send, Bot, User } from "lucide-react";
+import { X, Send, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { useToast } from "@/hooks/use-toast";
+import chatbotAvatar from "@/assets/chatbot-avatar.png";
 
 type Message = { role: "user" | "assistant"; content: string };
 
@@ -171,7 +172,17 @@ export const Chatbot = () => {
           <span className="absolute w-full h-full rounded-full bg-primary animate-ping opacity-30" />
         )}
         <span className="relative">
-          {isOpen ? <X className="w-6 h-6" /> : <Bot className="w-6 h-6" />}
+          {isOpen ? (
+            <X className="w-6 h-6" />
+          ) : (
+            <img
+              src={chatbotAvatar}
+              alt="Chatbot"
+              width={36}
+              height={36}
+              className="w-9 h-9 rounded-full object-cover"
+            />
+          )}
         </span>
       </button>
 
@@ -180,8 +191,14 @@ export const Chatbot = () => {
         <div className="fixed bottom-40 right-6 z-50 w-[350px] sm:w-[400px] h-[500px] bg-card border border-border rounded-2xl shadow-xl flex flex-col overflow-hidden animate-in slide-in-from-bottom-5 duration-300">
           {/* Header */}
           <div className="bg-primary text-primary-foreground p-4 flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-primary-foreground/20 flex items-center justify-center">
-              <Bot className="w-6 h-6" />
+            <div className="w-10 h-10 rounded-full bg-primary-foreground/20 flex items-center justify-center overflow-hidden">
+              <img
+                src={chatbotAvatar}
+                alt="Malar A/C Assistant"
+                width={40}
+                height={40}
+                className="w-full h-full object-cover"
+              />
             </div>
             <div>
               <h3 className="font-semibold">Malar A/C Assistant</h3>
@@ -198,8 +215,14 @@ export const Chatbot = () => {
                   className={`flex gap-2 ${msg.role === "user" ? "justify-end" : "justify-start"}`}
                 >
                   {msg.role === "assistant" && (
-                    <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <Bot className="w-4 h-4 text-primary" />
+                    <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 overflow-hidden">
+                      <img
+                        src={chatbotAvatar}
+                        alt="Assistant"
+                        width={32}
+                        height={32}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                   )}
                   <div
@@ -220,8 +243,14 @@ export const Chatbot = () => {
               ))}
               {isLoading && messages[messages.length - 1]?.role === "user" && (
                 <div className="flex gap-2 justify-start">
-                  <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Bot className="w-4 h-4 text-primary" />
+                  <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 overflow-hidden">
+                    <img
+                      src={chatbotAvatar}
+                      alt="Assistant"
+                      width={32}
+                      height={32}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <div className="bg-muted rounded-2xl rounded-bl-md px-4 py-2">
                     <div className="flex gap-1">
