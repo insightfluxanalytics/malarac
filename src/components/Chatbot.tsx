@@ -243,8 +243,14 @@ export const Chatbot = () => {
               ))}
               {isLoading && messages[messages.length - 1]?.role === "user" && (
                 <div className="flex gap-2 justify-start">
-                  <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Bot className="w-4 h-4 text-primary" />
+                  <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 overflow-hidden">
+                    <img
+                      src={chatbotAvatar}
+                      alt="Assistant"
+                      width={32}
+                      height={32}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <div className="bg-muted rounded-2xl rounded-bl-md px-4 py-2">
                     <div className="flex gap-1">
