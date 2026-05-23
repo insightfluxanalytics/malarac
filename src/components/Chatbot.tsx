@@ -215,8 +215,14 @@ export const Chatbot = () => {
                   className={`flex gap-2 ${msg.role === "user" ? "justify-end" : "justify-start"}`}
                 >
                   {msg.role === "assistant" && (
-                    <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <Bot className="w-4 h-4 text-primary" />
+                    <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 overflow-hidden">
+                      <img
+                        src={chatbotAvatar}
+                        alt="Assistant"
+                        width={32}
+                        height={32}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                   )}
                   <div
