@@ -172,7 +172,17 @@ export const Chatbot = () => {
           <span className="absolute w-full h-full rounded-full bg-primary animate-ping opacity-30" />
         )}
         <span className="relative">
-          {isOpen ? <X className="w-6 h-6" /> : <Bot className="w-6 h-6" />}
+          {isOpen ? (
+            <X className="w-6 h-6" />
+          ) : (
+            <img
+              src={chatbotAvatar}
+              alt="Chatbot"
+              width={36}
+              height={36}
+              className="w-9 h-9 rounded-full object-cover"
+            />
+          )}
         </span>
       </button>
 
